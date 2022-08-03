@@ -33,5 +33,4 @@ public class Subject {
 		return "Subject [name=" + name + ", description=" + description + ", preRequisite=" + preRequisite + "]";
 	}
 	
-	//a
 }
