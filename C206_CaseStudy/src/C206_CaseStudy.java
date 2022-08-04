@@ -54,6 +54,7 @@ public class C206_CaseStudy {
 	
 	public static void addStudent(ArrayList<Student> studentList, Student s) {
 		studentList.add(s);
+		
 	}
 	
 

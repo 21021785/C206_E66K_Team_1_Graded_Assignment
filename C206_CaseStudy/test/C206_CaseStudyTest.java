@@ -24,8 +24,8 @@ public class C206_CaseStudyTest {
 
 	@Before
 	public void setUp() throws Exception {
-		s1 = new Student("Susan", 'F',"98763421","24/04/2005", "Hougang","Math","NIL");
-		s2 = new Student("Jonathan", 'M',"89431275","16/10/2007", "Potong Pasir","Science","I had a great class today! "
+		s1 = new Student(1,"Susan", 'F',98763421,"24/04/2005", "Hougang","Math","NIL");
+		s2 = new Student(2,"Jonathan", 'M',89431275,"16/10/2007", "Potong Pasir","Science","I had a great class today! "
 					+"The teacher was patient and explained the theories well. ");
 		t1 = new Teacher("Ms Lee", "History");
 		t2 = new Teacher("Mr Toh", "Math");
@@ -33,7 +33,7 @@ public class C206_CaseStudyTest {
 		studentList= new ArrayList<Student>();
 		teacherList= new ArrayList<Teacher>();
 	}
-	
+	@Test
 	public void testRegisterForStudent() {
 		//Item list is not null, so can add a new item 
 		assertNotNull("Test if there is valid Student arraylist to add to", studentList);
@@ -52,6 +52,17 @@ public class C206_CaseStudyTest {
 		assertSame("Test that Student is added same as 3rd item of the list?", s3, studentList.get(2));
 	
 	}
+	@Test 
+	public void testRegisterStudentForTuition() {
+		assertNotNull("test if there is valid Student arrayList to register student for tuition",studentList);
+		
+		C206_CaseStudy.addStudent(studentList, s1);
+		
+		//normal 
+		Boolean ok = C206_CaseStudy.doRegisterStudentTuition(studentList, 1, )
+	}
+	
+	
 	
 	
 

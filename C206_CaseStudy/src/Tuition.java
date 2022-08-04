@@ -1,13 +1,14 @@
 public class Tuition {
 	private int code; 
-	private int title;
+	private String title;
 	private String grpName;
 	private String description;
 	private double duration;
 	private String preReq;
 	private String teacher;
-	public Tuition(int code, int title, String grpName, String description, double duration, String preReq,
-			String teacher) {
+	private String tuition;
+	public Tuition(int code, String title, String grpName, String description, double duration, String preReq,
+			String teacher, String tuition ) {
 		this.code = code;
 		this.title = title;
 		this.grpName = grpName;
@@ -15,6 +16,7 @@ public class Tuition {
 		this.duration = duration;
 		this.preReq = preReq;
 		this.teacher = teacher;
+		this.tuition = tuition;
 	}
 	public int getCode() {
 		return code;
@@ -22,10 +24,10 @@ public class Tuition {
 	public void setCode(int code) {
 		this.code = code;
 	}
-	public int getTitle() {
+	public String getTitle() {
 		return title;
 	}
-	public void setTitle(int title) {
+	public void setTitle(String title) {
 		this.title = title;
 	}
 	public String getGrpName() {
@@ -57,6 +59,12 @@ public class Tuition {
 	}
 	public void setTeacher(String teacher) {
 		this.teacher = teacher;
+	}
+	public String getTuition() {
+		return tuition;
+	}
+	public void setTuition(String tuition) {
+		this.tuition = tuition;
 	}
 	@Override
 	public String toString() {
