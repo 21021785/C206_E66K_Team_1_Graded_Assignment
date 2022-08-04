@@ -2,7 +2,7 @@ public class Student extends Subject{
 	private int studentID;
 	private String name;
 	private char gender;
-	private String mobile;
+	private int mobile;
 	private String dob;
 	private String residence;
 	private String interest; 
@@ -10,8 +10,9 @@ public class Student extends Subject{
 	//burh
 	//tests
 	//bruh
-	public Student (int studentID, String name, char gender, String mobile, String dob, String country, 
+	public Student (int studentID, String name, char gender, int mobile, String dob, String country, 
 			String interest, String feedback) {
+		this.studentID = studentID;
 		this.name = name;
 		this.gender = gender;
 		this.mobile = mobile;
@@ -45,11 +46,11 @@ public class Student extends Subject{
 		this.gender = gender;
 	}
 
-	public String getMobile() {
+	public int  getMobile() {
 		return mobile;
 	}
 
-	public void setMobile(String mobile) {
+	public void setMobile(int mobile) {
 		this.mobile = mobile;
 	}
 

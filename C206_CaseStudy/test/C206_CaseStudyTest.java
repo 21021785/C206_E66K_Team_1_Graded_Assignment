@@ -59,7 +59,9 @@ public class C206_CaseStudyTest {
 		C206_CaseStudy.addStudent(studentList, s1);
 		
 		//normal 
-		Boolean ok = C206_CaseStudy.doRegisterStudentTuition(studentList, 1, )
+		//Boolean ok = C206_CaseStudy.doRegisterStudentTuition(studentList, 1);
+		//assertTrue("Test if student able to register for tuition?", ok);
+		//assertFalse()
 	}
 	
 	
