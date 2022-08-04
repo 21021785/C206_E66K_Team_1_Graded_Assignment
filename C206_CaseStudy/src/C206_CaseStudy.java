@@ -18,5 +18,20 @@ public class C206_CaseStudy {
 
 
 	}
+	
+	public static void studentMenu() {
+		Helper.line(40, "-");
+		System.out.println("TUITION MENU");
+		Helper.line(40, "-");
+		System.out.println("1. Add a Student");
+		System.out.println("2. View all staff");
+		System.out.println("3. Update Student info");
+		System.out.println("4. Generate Montly report");
+		System.out.println("5. Quit");
+	}
+	
+	public static void teacherMenu() {
+		Helper.line(40,)
+	}
 
 }
