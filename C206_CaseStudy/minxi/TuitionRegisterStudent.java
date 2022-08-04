@@ -46,7 +46,7 @@ public class TuitionRegisterStudent {
 			return rr;
 			
 		}
-		public static void addCamcorder(ArrayList<Register> registerList, Register rr) {
+		public static void addRegister(ArrayList<Register> registerList, Register rr) {
 			
 			registerList.add(rr);
 			

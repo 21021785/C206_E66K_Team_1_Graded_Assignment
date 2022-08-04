@@ -13,14 +13,14 @@ public class testTuitionRegisterStudent {
 	private Register s1;
 	private Register s2;
 	
-	
+	private ArrayList<Register> registerList;
 	@Before
 	public void setUp() throws Exception {
 		//prepare test data
 		s1 = new Register("001","0011", "susan@gmail.com","pending","2022-09-13");
 		s2 = new Register("002","0022", "thomas@gmail,com", "pending", "2022-07-19");
 		
-		registerList = new ArrayList<Register>();
+		
 		
 	}
 	@Test
@@ -44,17 +44,17 @@ public class testTuitionRegisterStudent {
 		// Test if Item list is not null but empty -boundary
 		assertNotNull("Test if there is valid register arraylist to retrieve item", registerList);
 		
-		//test if the list of camcorders retrieved from the SourceCentre is empty - boundary
+		//test if the list of register retrieved from the SourceCentre is empty - boundary
 		String allRegister= TuitionRegisterStudent.retrieveAllRegister(registerList);
 		String testOutput = "";
 		assertEquals("Check that ViewAllRegisterList", testOutput, allRegister);
 		
 		//Given an empty list, after adding 2 items, test if the size of the list is 2 - normal
-		ResourceCentre.addRegister(registerList, s1);
-		ResourceCentre.addRegister(registerList, s2);
+		TuitionRegisterStudent.addRegister(registerList, s1);
+		TuitionRegisterStudent.addRegister(registerList, s2);
 		assertEquals("Test that register arraylist size is 2?", 2, registerList.size());
 		
-		//test if the expected output string same as the list of camcorders retrieved from the SourceCentre	
+		//test if the expected output string same as the list of registers retrieved from the SourceCentre	
 		allRegister= TuitionRegisterStudent.retrieveAllRegister(registerList);
 		testOutput = String.format("%-10s %-10s %-30s %-10s %-20s\n","001","0011", "susan@gmail.com","pending","2022-09-13");
 		testOutput += String.format("%-10s %-10s %-30s %-10s %-20s\n","002","0022", "thomas@gmail,com", "pending", "2022-07-19" );
@@ -75,8 +75,8 @@ public class testTuitionRegisterStudent {
 		ok = TuitionRegisterStudent.doDeleteRegister(registerList, "001" );
 		assertFalse("Test if the same item is NOT ok to delete again?", ok);	
 		//error condition
-		ResourceCentre.addCamcorder(registerList, s2);	
-		s2.remove();
+		TuitionRegisterStudent.addRegister(registerList, s2);	
+		deleteRegister(s2);
 		ok = TuitionRegisterStudent.doDeleteRegister(registerList, "002");
 		assertFalse("Test that un-available item is NOT ok to retrieve?", ok);
 		//error condition
