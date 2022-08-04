@@ -50,7 +50,7 @@ public class C206_CaseStudyTest {
 		C206_CaseStudy.addStudent(studentList, s3);
 		assertEquals("Test that Student arraylist size is 3?", 3, studentList.size());
 		assertSame("Test that Student is added same as 3rd item of the list?", s3, studentList.get(2));
-	//test
+	
 	}
 	
 	
