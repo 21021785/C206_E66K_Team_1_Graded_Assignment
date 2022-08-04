@@ -52,5 +52,10 @@ public class C206_CaseStudy {
 		System.out.println("5. Quit");
 	}
 	
+	public static void addStudent(ArrayList<Student> studentList, Student s) {
+		studentList.add(s);
+		
+	}
+	
 
 }
