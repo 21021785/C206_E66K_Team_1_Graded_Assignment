@@ -7,15 +7,15 @@
  *
  */
 public class Subject {
-	private int subjectID;
 	private String name;
 	private String description;
 	private String preRequisite;
-	public int getSubjectID() {
-		return subjectID;
-	}
-	public void setSubjectID(int subjectID) {
-		this.subjectID = subjectID;
+	
+	public Subject(String name, String description, String preRequisite) {
+		// TODO Auto-generated constructor stub
+		this.name = name;
+		this.description = description;
+		this.preRequisite = preRequisite;
 	}
 	public String getName() {
 		return name;
