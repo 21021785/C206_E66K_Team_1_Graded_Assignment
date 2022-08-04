@@ -1,4 +1,4 @@
-public class Student {
+public class Student extends Subject{
 	private String name;
 	private char gender;
 	private String mobile;
