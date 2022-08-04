@@ -1,4 +1,5 @@
 public class Student extends Subject{
+	private int studentID;
 	private String name;
 	private char gender;
 	private String mobile;
@@ -7,7 +8,7 @@ public class Student extends Subject{
 	private String interest; 
 	private String feeedback;
 	
-	public Student (String name, char gender, String mobile, String dob, String country, 
+	public Student (int studentID, String name, char gender, String mobile, String dob, String country, 
 			String interest, String feedback) {
 		this.name = name;
 		this.gender = gender;
@@ -20,6 +21,14 @@ public class Student extends Subject{
 
 	public String getName() {
 		return name;
+	}
+
+	public int getStudentID() {
+		return studentID;
+	}
+
+	public void setStudentID(int studentID) {
+		this.studentID = studentID;
 	}
 
 	public void setName(String name) {

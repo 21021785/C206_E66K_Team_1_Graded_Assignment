@@ -7,9 +7,16 @@
  *
  */
 public class Subject {
+	private int subjectID;
 	private String name;
 	private String description;
 	private String preRequisite;
+	public int getSubjectID() {
+		return subjectID;
+	}
+	public void setSubjectID(int subjectID) {
+		this.subjectID = subjectID;
+	}
 	public String getName() {
 		return name;
 	}

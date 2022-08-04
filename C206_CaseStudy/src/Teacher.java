@@ -1,8 +1,10 @@
 public class Teacher {
+	private int teacherID;
 	private String name;
 	private String subject;
 	
 	public Teacher(String name, String subject) {
+		this.teacherID = teacherID;
 		this.name = name;
 		this.subject = subject;
 	}
