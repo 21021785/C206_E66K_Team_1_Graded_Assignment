@@ -1,17 +1,17 @@
 public class Tuition {
 	private int code; 
 	private String title;
-	private String grpName;
+	private String subject;
 	private String description;
 	private double duration;
 	private String preReq;
 	private String teacher;
 	private String tuition;
-	public Tuition(int code, String title, String grpName, String description, double duration, String preReq,
+	public Tuition(int code, String title, String subject, String description, double duration, String preReq,
 			String teacher, String tuition ) {
 		this.code = code;
 		this.title = title;
-		this.grpName = grpName;
+		this.subject = subject;
 		this.description = description;
 		this.duration = duration;
 		this.preReq = preReq;
@@ -30,11 +30,11 @@ public class Tuition {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	public String getGrpName() {
-		return grpName;
+	public String getSubject() {
+		return subject;
 	}
-	public void setGrpName(String grpName) {
-		this.grpName = grpName;
+	public void setSubject(String subject) {
+		this.subject = subject;
 	}
 	public String getDescription() {
 		return description;
@@ -68,7 +68,7 @@ public class Tuition {
 	}
 	@Override
 	public String toString() {
-		return "Tuition [code=" + code + ", title=" + title + ", grpName=" + grpName + ", description=" + description
+		return "Tuition [code=" + code + ", title=" + title + ", Subject=" + subject + ", description=" + description
 				+ ", duration=" + duration + ", preReq=" + preReq + ", teacher=" + teacher + "]";
 	}
 	
