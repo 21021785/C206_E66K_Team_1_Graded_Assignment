@@ -21,17 +21,36 @@ public class C206_CaseStudy {
 	
 	public static void studentMenu() {
 		Helper.line(40, "-");
-		System.out.println("TUITION MENU");
+		System.out.println("STUDENT MENU");
 		Helper.line(40, "-");
-		System.out.println("1. Add a Student");
-		System.out.println("2. View all staff");
-		System.out.println("3. Update Student info");
-		System.out.println("4. Generate Montly report");
+		System.out.println("1. Register Account");
+		System.out.println("2. Edit account");
+		System.out.println("3. Search tuition and timetable");
+		System.out.println("4. Register for tuition");
+		System.out.println("5. Cancel tuition");
+		System.out.println("6. Quit");
+	}
+	
+	public static void tuitionAdministratorMenu() {
+		Helper.line(40, "-");
+		System.out.println("TUITION ADMINISTRATOR MENU");
+		Helper.line(40, "-");
+		System.out.println("1. Register accounton behalf of Student");
+		System.out.println("2. Edit account");
+		System.out.println("3. Search for title (title, mode, dates)");
+		System.out.println("4. Quit");
+	}
+	
+	public static void tuitionManagerMenu() {
+		Helper.line(40, "-");
+		System.out.println("TUITION MANAGER MENU");
+		Helper.line(40, "-");
+		System.out.println("1. Search and view tuition timetable details");
+		System.out.println("2. Record/edit equiry information");
+		System.out.println("3. Assign teahcer to subject group");
+		System.out.println("4. Search and view teacher details");
 		System.out.println("5. Quit");
 	}
 	
-	public static void teacherMenu() {
-		Helper.line(40,)
-	}
 
 }
