@@ -71,5 +71,5 @@ public class Tuition {
 		return "Tuition [code=" + code + ", title=" + title + ", Subject=" + subject + ", description=" + description
 				+ ", duration=" + duration + ", preReq=" + preReq + ", teacher=" + teacher + "]";
 	}
-	
+	//aj
 }
