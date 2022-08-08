@@ -1,5 +1,5 @@
 public class Tuition {
-	private int code; 
+	private String code; 
 	private String title;
 	private String subject;
 	private String description;
@@ -7,7 +7,7 @@ public class Tuition {
 	private String preReq;
 	private String teacher;
 	private String tuition;
-	public Tuition(int code, String title, String subject, String description, double duration, String preReq,
+	public Tuition(String code, String title, String subject, String description, double duration, String preReq,
 			String teacher, String tuition ) {
 		this.code = code;
 		this.title = title;
@@ -18,10 +18,10 @@ public class Tuition {
 		this.teacher = teacher;
 		this.tuition = tuition;
 	}
-	public int getCode() {
+	public String getCode() {
 		return code;
 	}
-	public void setCode(int code) {
+	public void setCode(String code) {
 		this.code = code;
 	}
 	public String getTitle() {
