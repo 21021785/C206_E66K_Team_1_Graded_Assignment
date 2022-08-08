@@ -6,7 +6,7 @@
  * @author nicks
  *
  */
-public class Subject {
+public class Subject{
 	private String name;
 	private String description;
 	private String preRequisite;
@@ -17,6 +17,7 @@ public class Subject {
 		this.description = description;
 		this.preRequisite = preRequisite;
 	}
+	
 	public String getName() {
 		return name;
 	}
