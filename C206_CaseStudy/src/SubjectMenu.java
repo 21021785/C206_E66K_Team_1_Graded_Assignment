@@ -11,23 +11,20 @@ public class SubjectMenu {
 		subjectList.add(new Subject("Subject002", "Science", "Min age 7"));
 		subjectList.add(new Subject("Subject003", "Coding", "Min age 14"));
 
-		
 		ArrayList<Teacher> teacherList = new ArrayList<Teacher>();
 
 		teacherList.add(new Teacher("Teacher001", "Justin", "Male", "justin@email.com", "Math,English", "Math"));
 		teacherList.add(new Teacher("Teacher002", "Min Xi", "Female", "minxi@email.com", "Math,Sch", "Math"));
 		teacherList.add(new Teacher("Teacher003", "YongLer", "Male", "yongler@email.com", "Com,English", "Math"));
 
-		
-		
 		int option = 0;
 
 		while (option != 3) {
-			
+
 			SubjectMenu.menu();
 			option = Helper.readInt("Enter an option > ");
 
-			if(option == 1) {
+			if (option == 1) {
 				SubjectMenu.displaySubjectMenu();
 				option = Helper.readInt("Enter an option > ");
 
@@ -45,13 +42,12 @@ public class SubjectMenu {
 
 				} else if (option == 3) {
 					// Return item
-					SubjectMenu.setHeader("DELETE SUBJECT");	
+					SubjectMenu.setHeader("DELETE SUBJECT");
 
 					SubjectMenu.deleteSubject(subjectList);
-					
-				} 
-			}
-			else if(option == 2) {
+
+				}
+			} else if (option == 2) {
 				SubjectMenu.displayTeacherMenu();
 				option = Helper.readInt("Enter an option > ");
 
@@ -64,12 +60,11 @@ public class SubjectMenu {
 				} else if (option == 2) {
 					// Assign Teacher
 					SubjectMenu.setHeader("Assign teacher");
-					
-					SubjectMenu.assignTeacher(teacherList,subjectList);
-					
+
+					SubjectMenu.assignTeacher(teacherList, subjectList);
+
 				}
-			}
-			else if (option == 3) {
+			} else if (option == 3) {
 				System.out.println("Bye!");
 			} else {
 				System.out.println("Invalid option");
@@ -245,6 +240,16 @@ public class SubjectMenu {
 	public static void assignTeacher(ArrayList<Teacher> teacherList, ArrayList<Subject> subjectList) {
 		SubjectMenu.viewAllTeacher(teacherList);
 		String id = Helper.readString("Enter teacher id > ");
+
+		/*
+		 * boolean checkid = false; if(isEmpty.teacherList.size()) for (int i = 0; i <
+		 * teacherList.size(); i++) { if
+		 * (id.equalsIgnoreCase(teacherList.get(i).getTeacherID())) {
+		 * 
+		 * id = Helper.readString("Enter teacher id > "); checkid = true; }else {
+		 * checkid = false; } } }
+		 */
+
 		SubjectMenu.viewAllSubjectDesc(subjectList);
 		String subject = Helper.readString("Enter subject group > ");
 		Boolean isAssigned = doAssignTeacher(teacherList, id, subject);
