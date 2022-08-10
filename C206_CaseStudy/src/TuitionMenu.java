@@ -7,9 +7,9 @@ public class TuitionMenu {
 
 		ArrayList<Tuition> tuitionList = new ArrayList<Tuition>();
 		
-		tuitionList.add(new Tuition("001", "Math Tuition", "Math", "Includes A-math, E-math etc", 4, "Min Age 13", "Low Jun Jie", "Math Tuition"));
-		tuitionList.add(new Tuition("002", "Science Tuition", "Science", "Includes Bio, physics and Chemistry", 6, "Min Age 13", "Tan Wen Xiong", "Science Tuition"));
-		tuitionList.add(new Tuition("003", "Coding Tuition", "Coding", "Includes C++, python and Java", 5, "Min Age 15", "John Pang", ""));
+		tuitionList.add(new Tuition("001", "Math Tuition", "Math", "Includes A-math, E-math etc", 4.0, "Min Age 13", "Low Jun Jie", "Math Tuition"));
+		tuitionList.add(new Tuition("002", "Science Tuition", "Science", "Includes Bio, physics and Chemistry", 6.0, "Min Age 13", "Tan Wen Xiong", "Science Tuition"));
+		tuitionList.add(new Tuition("003", "Coding Tuition", "Coding", "Includes C++, python and Java", 5.0, "Min Age 15", "John Pang", ""));
 		
 		int option = 0;
 
@@ -94,8 +94,8 @@ public class TuitionMenu {
 		
 		for (int i = 0; i < tuitionList.size(); i++) {
 			
-			output += String.format("%-15s %-20s %-10s %-40s %-20f %-15s %-5s \n",  tuitionList.get(i).getCode(), tuitionList.get(i).getTitle(), tuitionList.get(i).getSubject(), tuitionList.get(i).getDescription(),
-					tuitionList.get(i).getDuration(), tuitionList.get(i).getPreReq(), tuitionList.get(i).getTeacher());
+			output += String.format("%-15s %-20s %-10s %-40s %-20f %-15s %-5s \n",  tuitionList.get(i).getCode(), tuitionList.get(i).getTitle(), tuitionList.get(i).getSubject(), 
+					tuitionList.get(i).getDescription(), tuitionList.get(i).getDuration(), tuitionList.get(i).getPreReq(), tuitionList.get(i).getTeacher());
 		}
 		return output;
 	}

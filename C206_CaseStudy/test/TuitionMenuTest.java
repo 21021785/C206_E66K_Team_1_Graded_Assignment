@@ -27,6 +27,7 @@ public class TuitionMenuTest {
 		tuitionList = new ArrayList<Tuition>();
 	}
 	
+	@Test
 	public void testRetrieveAllSubject() {
 		// Test if Item list is not null but empty, so that can add a new item
 		assertNotNull("Test if there is valid Tuition arraylist to add to", tuitionList);
@@ -45,10 +46,12 @@ public class TuitionMenuTest {
 		// the SourceCentre
 		allTuition = TuitionMenu.retrieveAllTuition(tuitionList);
 
-		testOutput = String.format("%-15s %-30s %-20s\n", "Subject001", "Math", "Min age 3");
-		testOutput += String.format("%-15s %-30s %-20s\n", "Subject002", "Science", "Min age 7");
+		testOutput = String.format("%-15s %-20s %-10s %-40s %-20f %-15s %-5s \n", "001", "Math Tuition", "Math", 
+				"Includes A-math, E-math etc", 4.0, "Min Age 13", "Low Jun Jie", "Math Tuition");
+		testOutput += String.format("%-15s %-20s %-10s %-40s %-20f %-15s %-5s \n", "002", "Science Tuition", "Science", 
+				"Includes Bio, physics and Chemistry", 6.0, "Min Age 13", "Tan Wen Xiong", "Science Tuition");
 
-		assertEquals("Check that ViewAllTuitionlist", testOutput, allTuition);
+		assertEquals("Check that viewAllTuition", testOutput, allTuition);
 
 	}
 
